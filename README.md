@@ -1,4 +1,6 @@
 # Team Grup-Grass
+## [Github Pages Link](https://ninjabreadlord.github.io/grup-grass/)
+
 ## [Project Idea](https://ninjabreadlord.github.io/grup-grass/webProject)
 
 ## Table of Contents
@@ -7,7 +9,7 @@
 3. [Week 0](https://github.com/Naevey/grup-grass/blob/main/README.md#week-0)
 
 ## Our Team
-### [Github Pages](https://ninjabreadlord.github.io/grup-grass/TeamRoles)
+### [View on GitHub Pages](https://ninjabreadlord.github.io/grup-grass/TeamRoles)
 
 | Name | GitHub ID and Profile | Tasks | Scrum Board | Commits | Role | 
 |:-----|:----------------------|:-----:|:-----------:|:-------:|:-------:|
