@@ -5,6 +5,7 @@ Idea:
 ## Table of Contents
 1. [Our Team](https://github.com/Naevey/grup-grass/blob/main/README.md#our-team)
 2. [Github Pages](https://github.com/Naevey/grup-grass/blob/main/README.md#links-to-github-pages)
+3. [Week 0](https://github.com/Naevey/grup-grass/blob/main/README.md#week-0---plan,-team,-jobs)
 
 ## Our Team
 
