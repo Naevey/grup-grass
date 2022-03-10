@@ -5,7 +5,7 @@ Idea:
 ## Table of Contents
 1. [Our Team](https://github.com/Naevey/grup-grass/blob/main/README.md#our-team)
 2. [Github Pages](https://github.com/Naevey/grup-grass/blob/main/README.md#links-to-github-pages)
-3. [Week 0](https://github.com/Naevey/grup-grass/blob/main/README.md#week-0---plan,-team,-jobs)
+3. [Week 0](https://github.com/Naevey/grup-grass/blob/main/README.md#week-0)
 
 ## Our Team
 
@@ -23,7 +23,7 @@ Idea:
 ### [Erik]()
 ### [Kurtis]()
 
-## Week 0 - Plan, Team, Jobs
+## Week 0
 | Name | Tasks | Commits |
 |:-----|:----------------------|:-----:|
 | Kurtis Kwan | [Tasks]() | | 
