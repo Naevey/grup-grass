@@ -3,6 +3,7 @@
 
 # Team Grup-Grass
 ## [Github Pages Link](https://ninjabreadlord.github.io/grup-grass/)
+## [Scrum Board](https://github.com/NinjaBreadLord/grup-grass/projects/1)
 
 ## [Project Idea](https://ninjabreadlord.github.io/grup-grass/webProject)
 
