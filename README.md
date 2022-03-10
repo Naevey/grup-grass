@@ -1,3 +1,6 @@
+{% include navbar.html %}
+
+
 # Team Grup-Grass
 ## [Github Pages Link](https://ninjabreadlord.github.io/grup-grass/)
 
