@@ -22,7 +22,7 @@
 ## Links To Github Pages
 ### [Everitt](https://ninjabreadlord.github.io/Tri-3-Everitt-Cheng/)
 ### [Matthew]()
-### [Erik]()
+### [Erik](https://maboinjd.github.io/Tri-3-Erik-Peterson/)
 ### [Kurtis]()
 
 ## Week 0
