@@ -22,3 +22,10 @@ Idea:
 ### [Erik]()
 ### [Kurtis]()
 
+## Week 0 - Plan, Team, Jobs
+| Name | Tasks | Commits |
+|:-----|:----------------------|:-----:|
+| Kurtis Kwan | [Tasks]() | | 
+| Erik Peterson | [Tasks]() | 
+| Everitt Cheng | [Tasks]()  | 
+| Matthew Cao-Manaka | [Tasks]() | 
