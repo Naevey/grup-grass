@@ -14,7 +14,7 @@ Provide a webpage for her piano teaching business
 - Possible quizzes for scales, etc. 
 - A database of some music samples and sheet music
 
-Wireframe Idea
+## Wireframe Idea
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954249-d05638de-54c9-4a4b-a4c1-28ac51f6d5f4.png">
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954300-e8c2d0a6-7fd7-40cc-8db6-e5843c6cb191.png">
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954326-cb281fc9-2bfc-481f-97c7-5577141002a1.png">
