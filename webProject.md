@@ -1,6 +1,6 @@
 {% include navbar.html %}
 
-#Project 
+# Project 
 
 ## Sponsor: Seiran Sohn
 
