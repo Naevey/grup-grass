@@ -27,7 +27,7 @@
 ### [Everitt](https://ninjabreadlord.github.io/Tri-3-Everitt-Cheng/)
 ### [Matthew]()
 ### [Erik](https://maboinjd.github.io/Tri-3-Erik-Peterson/)
-### [Kurtis]()
+### [Kurtis](https://naevey.github.io/Tri-3-Kurtis-Kwan/)
 
 ## Week 0
 | Name | Tasks | Commits |
