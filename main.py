@@ -11,20 +11,24 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
+# connects /kangaroos path to render everit.html
+@app.route('/everit/')
+def everit():
+    return render_template("everit.html")
 
 
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
+@app.route('/eric/')
+def eric():
+    return render_template("eric.html")
 
 
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app.route('/matthew/')
+def matthew():
+    return render_template("mattehw.html")
+
+@app.route('/kurtis/')
+def kurtis():
+    return render_template("kurtis.html")
 
 
 @app.route('/stub/')
