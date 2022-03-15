@@ -2,21 +2,21 @@
 
 # Project 
 
-## Sponsor: Seiran Sohn
+## Sponsor: 3D Animation Club - Sahil Samar
 
 ## Our Project Idea
-Provide a webpage for her piano teaching business
-- Calender for lesson planning
-- Information panel on piano
-- Music with audio
-- Surveys for skill level
-- Create music related information 
-- Possible quizzes for scales, etc. 
-- A database of some music samples and sheet music
+Provide a webpage for the 3D animation club
+- Calender for meetings
+- 3D Dev portfolio with works from students
+- Blog/Introduction page
+- Database with instruction videos
+- Installation tutorials/ interface tutorials for Unity and Blender
+- Quiz on 3d animation
 
 ## Wireframe Idea
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954249-d05638de-54c9-4a4b-a4c1-28ac51f6d5f4.png">
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954300-e8c2d0a6-7fd7-40cc-8db6-e5843c6cb191.png">
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954326-cb281fc9-2bfc-481f-97c7-5577141002a1.png">
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954359-3e480190-b728-4216-afa5-fde57f18407c.png">
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/157954384-ac00a924-abf8-44da-a7ee-d5ad10a55399.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/158449790-4e6c7bb6-a550-4219-9f42-9d709121d2ef.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/158449838-1b747e3f-6954-4236-8e3d-1dfb3161f8eb.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/158449927-f2c64445-a6d5-40b9-a933-8a220a4d71b3.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/158449978-cc1fe6b7-47c1-4b5a-b0c1-27f282398a39.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/158450004-e044cd5c-357c-47da-9144-7885386fdcf7.png">
+
