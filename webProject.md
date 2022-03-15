@@ -3,7 +3,7 @@
 # Project 
 
 ## Sponsor: 3D Animation Club - Sahil Samar
-#Contact Information - (858)859-5095
+##Contact Information - (858)859-5095
 ## Our Project Idea
 Provide a webpage for the 3D animation club
 - Calender for meetings
