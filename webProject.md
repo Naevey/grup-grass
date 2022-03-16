@@ -11,7 +11,6 @@ Provide a webpage for the 3D animation club
 - Blog/Introduction page
 - Database with instruction videos
 - Installation tutorials/ interface tutorials for Unity and Blender
-- Quiz on 3d animation
 
 ## Wireframe Idea
 ![image](https://user-images.githubusercontent.com/89239598/158520356-cd723a5c-ba97-452e-9da8-3d6b1ecec8d5.png)
