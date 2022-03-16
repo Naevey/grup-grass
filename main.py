@@ -29,7 +29,9 @@ def matthew():
 @app.route('/kurtis/')
 def kurtis():
     return render_template("kurtis.html")
-
+@app.route('/calendar')
+def calender():
+    return render_template("calendar.html")
 
 @app.route('/stub/')
 def stub():
