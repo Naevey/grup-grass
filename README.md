@@ -8,9 +8,9 @@
 ## [Project Idea](https://ninjabreadlord.github.io/grup-grass/webProject)
 
 ## Table of Contents
-1. [Our Team](https://github.com/Naevey/grup-grass/blob/main/README.md#our-team)
-2. [Github Pages](https://github.com/Naevey/grup-grass/blob/main/README.md#links-to-github-pages)
-3. [Week 0](https://github.com/Naevey/grup-grass/blob/main/README.md#week-0)
+1. [Our Team](https://github.com/NinjaBreadLord/grup-grass/blob/main/README.md#our-team)
+2. [Github Pages](https://github.com/NinjaBreadLord/grup-grass/blob/main/README.md#links-to-github-pages)
+3. [Week 0](https://github.com/NinjaBreadLord/grup-grass/blob/main/README.md#week-0)
 
 ## Our Team
 ### [View on GitHub Pages](https://ninjabreadlord.github.io/grup-grass/TeamRoles)
