@@ -17,9 +17,9 @@ def everit():
     return render_template("everit.html")
 
 
-@app.route('/eric/')
-def eric():
-    return render_template("eric.html")
+@app.route('/erik/')
+def erik():
+    return render_template("erik.html")
 
 
 @app.route('/matthew/')
