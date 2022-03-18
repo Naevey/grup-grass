@@ -28,3 +28,11 @@
 | Erik Peterson | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/5) | 
 | Everitt Cheng | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/3)  | 
 | Matthew Cao-Manaka | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/2) | 
+
+## Week 1
+| Name | Tasks | Commits |
+|:-----|:----------------------|:-----:|
+| Kurtis Kwan | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/4) | | 
+| Erik Peterson | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/5) | 
+| Everitt Cheng | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/3)  | 
+| Matthew Cao-Manaka | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/2) | 
