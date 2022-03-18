@@ -15,11 +15,12 @@
 ## Our Team
 ### [View on GitHub Pages](https://ninjabreadlord.github.io/grup-grass/TeamRoles)
 
-## Links To Github Pages
-### [Everitt](https://ninjabreadlord.github.io/Tri-3-Everitt-Cheng/)
-### [Matthew](https://pqhantom.github.io/Tri-3-Matthew-Cao-Manaka/)
-### [Erik](https://maboinjd.github.io/Tri-3-Erik-Peterson/)
-### [Kurtis](https://naevey.github.io/Tri-3-Kurtis-Kwan/)
+|Person|Links To Github Pages|
+|----|----|
+|Everitt|https://ninjabreadlord.github.io/Tri-3-Everitt-Cheng/|
+|Matthew|https://pqhantom.github.io/Tri-3-Matthew-Cao-Manaka|
+|Erik|https://maboinjd.github.io/Tri-3-Erik-Peterson/|
+|Kurtis|https://naevey.github.io/Tri-3-Kurtis-Kwan|
 
 
 ## Week 1
