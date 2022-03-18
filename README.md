@@ -23,7 +23,7 @@
 
 
 ## Week 1
-| Name | Tasks | Commits |
+| Name | Ticket | Commits |
 |:-----|:----------------------|:-----:|
 | Kurtis Kwan | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/assigned/Naevey) | | 
 | Erik Peterson | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/assigned/MaBoinJd) | 
@@ -31,7 +31,7 @@
 | Matthew Cao-Manaka | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/assigned/pqhantom) | 
 
 ## Week 0
-| Name | Tasks | Commits |
+| Name | Ticket | Commits |
 |:-----|:----------------------|:-----:|
 | Kurtis Kwan | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/4) | | 
 | Erik Peterson | [Tasks](https://github.com/NinjaBreadLord/grup-grass/issues/5) | 
