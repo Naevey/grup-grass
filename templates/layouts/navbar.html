@@ -1,25 +1,14 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{name}}</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded-pill">
+    <a class="navbar-brand" href="/" style="font-family: Helvetica" title="3D Dev">3D Development</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Portfolio</a>
-            <a class="nav-link" href={{ url_for('everit') }}>everit</a>
-            <a class="nav-link" href={{ url_for('erik') }}>erik</a>
-            <a class="nav-link" href={{ url_for('matthew') }}>matthew</a>
-            <a class="nav-link" href={{ url_for('kurtis') }}>kurtis</a>
-            <a class="nav-link" href={{ url_for('calender') }}>Calender</a>
-
-
-            <!-- stub is shown using the name of the route -->
-            <a class="nav-link" href="/stub">Stub</a>
-            <a class="nav-link" href="/greet">Greet</a>
+        <div class="nav-item rounded-pill">
+            <a class="nav-link" href="/"
         </div>
     </div>
 </nav>
