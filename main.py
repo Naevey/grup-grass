@@ -14,21 +14,21 @@ def index():
 # connects /kangaroos path to render everit.html
 @app.route('/everit/')
 def everit():
-    return render_template("everit.html")
+    return render_template("aboutme/everit.html")
 
 
 @app.route('/erik/')
 def erik():
-    return render_template("erik.html")
+    return render_template("aboutme/erik.html")
 
 
 @app.route('/matthew/')
 def matthew():
-    return render_template("mattehw.html")
+    return render_template("aboutme/mattehw.html")
 
 @app.route('/kurtis/')
 def kurtis():
-    return render_template("kurtis.html")
+    return render_template("aboutme/kurtis.html")
 @app.route('/calendar')
 def calender():
     return render_template("calendar.html")
