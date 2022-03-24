@@ -1,7 +1,28 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+{% set project = "Home" %}
+
+{% block body %}
+
+<style>
+    body{
+        background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+        background-size: cover;
+
+
+
+        height: 100vh;
+        padding:0;
+        margin:0;
+    }
+</style>
+
+<body>
+    <div>
+        <div class="card text-white text-center bg-dark border-success" style="width: 50%">
+            <div class="card-body justify-content-center">
+                <h1 class="card-title">Del Norte 3D Development Club</h1>
+            </div>
+            <div class="card-footer"> Broght 2 u by grup grass </div>
+    </div>
+</body>
