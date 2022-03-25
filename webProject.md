@@ -14,6 +14,10 @@ Provide a webpage for the 3D animation club for the club as a whole. Current mem
 
 We are also looking to implement an Admin login system so the leaders of the club can enter the site and make changes accordingly
 
+# Flow 
+![image](https://user-images.githubusercontent.com/28553165/160182230-00438da7-11a5-4ac0-bd22-0029d91bd60e.png)
+
+
 ## Wireframe Idea
 ![image](https://user-images.githubusercontent.com/89239598/158520356-cd723a5c-ba97-452e-9da8-3d6b1ecec8d5.png)
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/158449838-1b747e3f-6954-4236-8e3d-1dfb3161f8eb.png">
