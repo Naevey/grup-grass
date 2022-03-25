@@ -14,7 +14,11 @@ Provide a webpage for the 3D animation club for the club as a whole. Current mem
 
 We are also looking to implement an Admin login system so the leaders of the club can enter the site and make changes accordingly
 
-# Flow 
+## Liscencing
+GNU General Public Liscence 3.0
+In LISCENCE.MD
+
+## Flow 
 ![image](https://user-images.githubusercontent.com/28553165/160182230-00438da7-11a5-4ac0-bd22-0029d91bd60e.png)
 
 
