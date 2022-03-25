@@ -15,7 +15,7 @@ Provide a webpage for the 3D animation club for the club as a whole. Current mem
 We are also looking to implement an Admin login system so the leaders of the club can enter the site and make changes accordingly
 
 ## Licensing
-GNU General Public License 3.0
+GNU General Public License 3.0 - We want the website to be public and avalible to use, if others want to use our website they can easily do it
 In LICENSE.MD
 
 ## Flow 
@@ -32,4 +32,6 @@ In LICENSE.MD
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/89239598/160181842-68cf6715-73d9-49b8-b49c-755972bfb6af.png">
 
 ## Deployment Plans
-We will deploy the website using AWS. This will allow you to look up the website from google which will be very cool and convienent because the only other way to access the website would be running it from intelliJ which is very not cool and convenient. 
+We will deploy the website using AWS because we do not have Rasberry Pi. Our deployment manager is Matthew Cao-Manaka. 
+Currently we are already in progress in working out the deployment, however we are not completely done.
+Matthew is hoping to finish deployment in the next week by April 1st, Friday. 
