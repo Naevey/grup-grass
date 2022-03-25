@@ -16,7 +16,9 @@ We are also looking to implement an Admin login system so the leaders of the clu
 
 ## Licensing
 GNU General Public License 3.0 - We want the website to be public and avalible to use, if others want to use our website they can easily do it
-In LICENSE.MD
+Stored in LICENSE.MD
+
+[LICENSE.MD](https://github.com/NinjaBreadLord/grup-grass/blob/main/LICENSE)
 
 ## Flow 
 ![image](https://user-images.githubusercontent.com/28553165/160182230-00438da7-11a5-4ac0-bd22-0029d91bd60e.png)
