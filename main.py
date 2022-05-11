@@ -33,6 +33,9 @@ def kurtis():
 @app.route('/calendar')
 def calender():
     return render_template("calendar.html")
+@app.route('/blog')
+def blog():
+    return render_template("blog.html")
 
 @app.route('/stub/')
 def stub():
