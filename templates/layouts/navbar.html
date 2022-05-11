@@ -9,19 +9,25 @@
         border-radius: 15px;
         border: 2px solid #D3D3D3;
         background-color: white;
+        height: 150%;
+        width: 150%;
     }
     .nav-item:hover{
-        background-color: black;
+        background-color: pink;
         color:white;
     }
     .navborder{
-        border-radius: 100px;
-        border: 2px solid #D3D3D3;
+        {#border-radius: 100px;#}
+        {#border: 2px solid #D3D3D3;#}
+    }
+    .bg-custom-2 {
+        background-image: linear-gradient(15deg, #FF69B4 0%, #FFB6C1 100%);
+        opacity: 90%;
     }
 </style>
 <div class="navborder">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-pill">
-    <a class="navbar-brand" href="/" style="font-family: Helvetica" title="3D Dev">3D Development</a>
+    <nav class="navbar navbar-expand-sm navbar-light bg-custom-2 ">
+    <a class="navbar-brand" href="/" style="font-family: Helvetica; color:white;" title="3D Dev">3D Development</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,11 +42,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="blog">Blog</a>
             </li>
-            <li><a class="nav-item" href={{ url_for('crud.crud') }}>SQL CRUD</a></li>
-            <li><a class="nav-item" href={{ url_for('crud_api.crud_api') }}>SQL CRUD Async</a></li>
-            <li><a class="nav-item" href={{ url_for('crud.search') }}>SQL Search</a></li>
         </ul>
     </div>
+    <div>
 
+    </div>
     </nav>
 </div>
