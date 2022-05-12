@@ -7,10 +7,11 @@
 <style>
     .nav-item{
         border-radius: 15px;
-        border: 2px solid #D3D3D3;
+        {#border: 2px solid #D3D3D3;#}
         background-color: white;
-        height: 150%;
-        width: 150%;
+        {#height: 100%;#}
+        {#width: 500%;#}
+        margin-right: 1%;
     }
     .nav-item:hover{
         background-color: pink;
@@ -32,17 +33,21 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav mr-auto" style="padding-left:5%; margin:1%">
-            <li class="nav-item" >
-                <a class="nav-link" href="calendar">Calendar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Resources</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blog">Blog</a>
-            </li>
-        </ul>
+{#        <ul class="navbar-nav mr-auto" style="padding-left:5%; margin:1%">#}
+{#            <li class="nav-item">#}
+{#                <a class="nav-link" href="calendar">Calendar</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#                <a class="nav-link" href="">Resources</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#                <a class="nav-link" href="blog">Blog</a>#}
+{#            </li>#}
+{#        </ul>#}
+        <a class="nav-link nav-item"  href="calendar">Calendar</a>
+        <a class="nav-link nav-item" href="">Resources</a>
+        <a class="nav-link nav-item" href="blog">Blog</a>
+
     </div>
     <div>
 
