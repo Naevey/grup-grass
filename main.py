@@ -12,6 +12,7 @@ app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 # connects default URL to render index.html
 @app.route('/')
+@login_required
 def index():
     return render_template("index.html")
 
