@@ -3,10 +3,23 @@
 {% block body %}
 
 <html lang="en">
+<tbody>
+{% for note in notes %}
+    <tr>
+        <td>{{ note.note | safe }}</td>
+    </tr>
+{% endfor %}
+</tbody>
 
 <body>
-    <div>b</div>
+    <div style="font-size: 50px; position: center">BLOG</div>
 </body>
+
+<tr>
+    <td><textarea rows = "5" cols = "100%" name = "notes" id="notes" required></textarea></td>
+    <td><input type="submit" value="Add" ></td>
+</tr>
+
 </html>
 
 {% endblock %}
