@@ -38,6 +38,11 @@ def kurtis():
 @app.route('/calendar')
 def calender():
     return render_template("calendar.html")
+
+@app.route('/upload')
+@login_required
+def upload():
+    return render_template("upload.html")
 @app.route('/blog')
 def blog():
     return render_template("blog.html")
