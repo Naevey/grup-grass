@@ -1,8 +1,16 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 from flask_login import login_required
-     
-from cruddy.query import *
+
+from __init__ import app, login_manager
+from cruddy.app_crud import app_crud
+from contenty.app_content import app_content
+from cruddy.app_crud_api import app_crud_api
+from notey.app_notes import app_notes
+
+
+from cruddy.login import login, logout, authorize
+
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
@@ -45,7 +53,8 @@ def crud_login():
 
     # if not logged in, show the login page
     return render_template("login.html")
-@app_crud.route("/logout")        # this things doing stuff, it basically runs the logout function that is with the flask-login docs
+
+@app_crud.route("/logout")# this things doing stuff, it basically runs the logout function that is with the flask-login docs
 @login_required
 def logout():
     logout_user()  # removes login state of user from session

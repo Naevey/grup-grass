@@ -10,7 +10,9 @@ These object will be used throughout project.
 """
 
 # Setup of key Flask object (app)
+UPLOAD_FOLDER = 'static/uploads/'
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 dbURI = 'sqlite:///model/myDB.db'
 # Setup SQLAlchemy object and properties for the database (db)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
