@@ -2,12 +2,12 @@ from flask import url_for
 from werkzeug.utils import redirect
 
 from __init__ import login_manager, db
-from cruddy.model import Users
+from model import Students
 from flask_login import current_user, login_user, logout_user
 
 
 # this is method called by frontend, it has been randomized between Alchemy and Native SQL for fun
-def users_all():
+def students_all():
     """  May have some problems with sql in deployment
     if random.randint(0, 1) == 0:
         table = users_all_alc()
@@ -21,14 +21,14 @@ def users_all():
 
 # SQLAlchemy extract all users from database
 def users_all_alc():
-    table = Users.query.all()
+    table = Students.query.all()
     json_ready = [peep.read() for peep in table]
     return json_ready
 
 
 # Native SQL extract all users from database
 def users_all_sql():
-    table = db.session.execute('select * from users')
+    table = db.session.execute('select * from students')
     json_ready = sqlquery_2_list(table)
     return json_ready
 
@@ -50,20 +50,20 @@ def sqlquery_2_list(rows):
 def users_ilike(term):
     """filter Users table by term into JSON list (ordered by User.name)"""
     term = "%{}%".format(term)  # "ilike" is case insensitive and requires wrapped  %term%
-    table = Users.query.order_by(Users.name).filter((Users.name.ilike(term)) | (Users.email.ilike(term)))
+    table = Students.query.order_by(Students.name).filter((Students.name.ilike(term)) | (Students.email.ilike(term)))
     return [peep.read() for peep in table]
 
 
 # SQLAlchemy extract single user from database matching ID
 def user_by_id(userid):
     """finds User in table matching userid """
-    return Users.query.filter_by(userID=userid).first()
+    return Students.query.filter_by(userID=userid).first()
 
 
 # SQLAlchemy extract single user from database matching email
 def user_by_email(email):
     """finds User in table matching email """
-    return Users.query.filter_by(email=email).first()
+    return Students.query.filter_by(email=email).first()
 
 
 # check credentials in database
@@ -71,7 +71,7 @@ def is_user(email, password):
     # query email and return user record
     user_record = user_by_email(email)
     # if user record found, check if password is correct
-    return user_record and Users.is_password_match(user_record, password)
+    return user_record and Students.is_password_match(user_record, password)
 
 
 # login user based off of email and password
@@ -92,17 +92,17 @@ def login(email, password):
 def user_loader(user_id):
     """Check if user login status on each page protected by @login_required."""
     if user_id is not None:
-        return Users.query.get(user_id)
+        return Students.query.get(user_id)
     return None
 
 
 # Authorise new user requires user_name, email, password
-def authorize(name, email, password, phone):
+def authorize(firstname, email, password, phone):
     if is_user(email, password):
         return False
     else:
-        auth_user = Users(
-            name=name,
+        auth_user = Students(
+            firstname=firstname,
             email=email,
             password=password,
             phone=phone  # this should be added to authorize.html

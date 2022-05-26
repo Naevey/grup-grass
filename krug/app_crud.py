@@ -2,7 +2,7 @@
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 from flask_login import login_required
 
-from cruddy.query import *
+from krug.query import *
 from model import Students
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_krug = Blueprint('krug', __name__,
@@ -33,9 +33,9 @@ def crud():
 def create():
     """gets data from form and add it to Users table"""
     if request.form:
-        po = Users(
+        po = Students(
             request.form.get("name"),
-            request.form.get("text"),
+            request.form.get("description"),
         )
         po.create()
     return redirect(url_for('krug.crud'))
