@@ -1,4 +1,3 @@
-from datetime import date
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from flask_migrate import Migrate
@@ -77,13 +76,13 @@ class Students(db.Model):
 
 def student_tester():
     print("--------------------------")
-    print("Seed Data for Table: Events")
+    print("Seed Data for Table: Students")
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Students(firstname='everit', lastnane='cheng', title='hungry caterpillar', description="This is a caterpillar")
-    u2 = Students(firstname='mathew', lastnane='cow',title='jim', description="This is an innuendo")
-    u3 = Students(firstname='erig', lastnane='peter',title='antony vo', description="peter")
+    u1 = Students(firstname='everit', lastname='cheng', title='hungry caterpillar', description="This is a caterpillar")
+    u2 = Students(firstname='mathew', lastname='cow',title='jim', description="This is an innuendo")
+    u3 = Students(firstname='erig', lastname='peter',title='antony vo', description="peter")
     table = [u1, u2, u3]
     for row in table:
         try:
@@ -104,4 +103,4 @@ def student_printer():
 
 if __name__ == "__main__":
     student_tester()  #
-    student_printer()
+    student_printer() #

@@ -1,38 +1,40 @@
-""" database dependencies to support Users db examples """
-from __init__ import db
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
+from flask_migrate import Migrate
 
+from __init__ import app
 
-# Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along
+# Define variable to define type of database (sqlite), and name and location of myDB.db
+dbURI = 'sqlite:///mogel/myDB.db'
+# Setup properties for the database
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
+app.config['SECRET_KEY'] = 'SECRET_KEY'
+# Create SQLAlchemy engine to support SQLite dialect (sqlite:)
+db = SQLAlchemy(app)
+Migrate(app, db)
 
-# Define the Users table within the model
-# -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy
-# -- a.) db.Model is like an inner layer of the onion in ORM
-# -- b.) Users represents data we want to store, something that is built on db.Model
-# -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
-class Users(UserMixin, db.Model):
-    # define the Users schema
-    userID = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255), unique=False, nullable=False)
-    email = db.Column(db.String(255), unique=True, nullable=False)
-    password = db.Column(db.String(255), unique=False, nullable=False)
-    phone = db.Column(db.String(255), unique=False, nullable=False)
+class Students(db.Model):
 
-    # constructor of a User object, initializes of instance variables within object
-    def __init__(self, name, email, password, phone):
-        self.name = name
-        self.email = email
-        self.set_password(password)
-        self.phone = phone
+    studentID = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(255))
+    lastname = db.Column(db.String(255))
+    title = db.Column(db.String(255))
+    description = db.Column(db.Text)
+
+    # constructor of a Event object, initializes of instance variables within object
+    def __init__(self, firstname, lastname, title, description):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.title = title
+        self.description = description
 
     # CRUD create/add a new record to the table
     # returns self or None on error
     def create(self):
         try:
-            # creates a person object from Users(db.Model) class, passes initializers
-            db.session.add(self)  # add prepares to persist person object to Users table
+            # creates a person object from Events(db.Model) class, passes initializers
+            db.session.add(self)  # add prepares to persist person object to Events table
             db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit
             return self
         except IntegrityError:
@@ -43,24 +45,25 @@ class Users(UserMixin, db.Model):
     # returns dictionary
     def read(self):
         return {
-            "userID": self.userID,
-            "name": self.name,
-            "email": self.email,
-            "password": self.password,
-            "phone": self.phone,
-            "query": "by_alc"  # This is for fun, a little watermark
+            "studentID": self.studentID,
+            "firstname": self.firstname,
+            "lastname": self.lastname,
+            "title": self.title,
+            "description": self.description
         }
 
-    # CRUD update: updates users name, password, phone
+    # CRUD update: updates events name, description, etc
     # returns self
-    def update(self, name, password="", phone=""):
+    def update(self, firstname, lastname="", title="", description=""):
         """only updates values with length"""
-        if len(name) > 0:
-            self.name = name
-        if len(password) > 0:
-            self.set_password(password)
-        if len(phone) > 0:
-            self.phone = phone
+        if len(firstname) > 0:
+            self.firstname = firstname
+        if len(lastname) > 0:
+            self.lastname = lastname
+        if len(title) > 0:
+            self.title = title
+        if len(description) > 0:
+            self.description = description
         db.session.commit()
         return self
 
@@ -71,54 +74,33 @@ class Users(UserMixin, db.Model):
         db.session.commit()
         return None
 
-    # set password method is used to create encrypted password
-    def set_password(self, password):
-        """Create hashed password."""
-        self.password = generate_password_hash(password, method='sha256')
-
-    # check password to check versus encrypted password
-    def is_password_match(self, password):
-        """Check hashed password."""
-        result = check_password_hash(self.password, password)
-        return result
-
-    # required for login_user, overrides id (login_user default) to implemented userID
-    def get_id(self):
-        return self.userID
-
-
-"""Database Creation and Testing section"""
-
-
-def model_tester():
+def student_tester():
     print("--------------------------")
-    print("Seed Data for Table: users")
+    print("Seed Data for Table: Students")
     print("--------------------------")
     db.create_all()
     """Tester data for table"""
-    u1 = Users(name='Guy', email='guy@example.com', password='guy123', phone="1111111111")
-    # U7 intended to fail as duplicate key
-    u7 = Users(name='John Mortensen', email='jmort1021@yahoo.com', password='123qwerty', phone="8586791294")
-    table = [u1, u2, u3, u4, u5, u6, u7]
+    u1 = Students(firstname='everit', lastname='cheng', title='hungry caterpillar', description="This is a caterpillar")
+    u2 = Students(firstname='mathew', lastname='cow',title='jim', description="This is an innuendo")
+    u3 = Students(firstname='erig', lastname='peter',title='antony vo', description="peter")
+    table = [u1, u2, u3]
     for row in table:
         try:
             db.session.add(row)
             db.session.commit()
         except IntegrityError:
             db.session.remove()
-            print(f"Records exist, duplicate email, or error: {row.email}")
+            print(f"Records exist, duplicate url, or error: {row.url}")
 
-
-def model_printer():
+def student_printer():
     print("------------")
-    print("Table: users with SQL query")
+    print("Table: Students with SQL query")
     print("------------")
-    result = db.session.execute('select * from users')
+    result = db.session.execute('select * from students')
     print(result.keys())
     for row in result:
         print(row)
 
-
 if __name__ == "__main__":
-    model_tester()  # builds model of Users
-    model_printer()
+    student_tester()  #
+    student_printer() #
