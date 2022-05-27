@@ -17,24 +17,6 @@ app.register_blueprint(app_crud_api)
 def index():
     return render_template("index.html")
 
-
-@app.route('/everitt/')
-def everit():
-    return render_template("aboutme/everitt.html")
-
-
-@app.route('/erik/')
-def erik():
-    return render_template("aboutme/erik.html")
-
-
-@app.route('/matthew/')
-def matthew():
-    return render_template("aboutme/mattehw.html")
-
-@app.route('/kurtis/')
-def kurtis():
-    return render_template("aboutme/kurtis.html")
 @app.route('/calendar')
 def calender():
     return render_template("calendar.html")
