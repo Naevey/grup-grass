@@ -42,6 +42,8 @@ def calender():
 @login_required
 def upload():
     return render_template("upload.html")
+
+@login_required
 @app.route('/blog')
 def blog():
     return render_template("blog.html")
