@@ -7,7 +7,7 @@ from model import Students
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_krug = Blueprint('krug', __name__,
                      url_prefix='/krug',
-                     template_folder='templates/cruddy/',
+                     template_folder='templates/kruggy/',
                      static_folder='static',
                      static_url_path='static')
 
@@ -22,7 +22,7 @@ app_krug = Blueprint('krug', __name__,
 @app_krug.route('/')
 def crud():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("krug.html", table=students_all())
+    return render_template("krugg.html", table=students_all())
 
 
 # Flask-Login directs unauthorised users to this unauthorized_handler
@@ -47,11 +47,11 @@ def read():
     """gets userid from form and obtains corresponding data from Users table"""
     table = []
     if request.form:
-        userid = request.form.get("studentid")
-        po = user_by_id(userid)
+        studentid = request.form.get("studentid")
+        po = student_by_id(studentid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("krug.html", table=table)
+    return render_template("krugg.html", table=table)
 
 
 # CRUD update
@@ -61,7 +61,7 @@ def update():
     if request.form:
         studentid = request.form.get("studentid")
         firstname = request.form.get("firstname")
-        po = user_by_id(studentid)
+        po = student_by_id(studentid)
         if po is not None:
             po.update(firstname)
     return redirect(url_for('krug.crud'))
@@ -73,7 +73,7 @@ def delete():
     """gets userid from form delete corresponding record from Users table"""
     if request.form:
         studentid = request.form.get("studentid")
-        po = user_by_id(studentid)
+        po = student_by_id(studentid)
         if po is not None:
             po.delete()
     return redirect(url_for('krug.crud'))
@@ -92,5 +92,5 @@ def search_term():
     """ obtain term/search request """
     req = request.get_json()
     term = req['term']
-    response = make_response(jsonify(users_ilike(term)), 200)
+    response = make_response(jsonify(students_ilike(term)), 200)
     return response

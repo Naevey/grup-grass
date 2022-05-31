@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block body %}
+
 <style>
     body{
         background-color: #0e163b;
@@ -16,6 +17,9 @@
 </style>
 
 <div>
+    {% for row in table %}
+        <option label="{{ row['studentID'] }}">{{ row['studentID'] }}</option>
+    {% endfor %}
     <h1 style="text-align: center">Upload Your Works</h1>
     <p style="text-align: center"> Here you can upload your own works. Once uploaded they will be displayed on the student works tab.</p>
 </div>
