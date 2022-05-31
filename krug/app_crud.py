@@ -2,7 +2,7 @@
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 from flask_login import login_required
 
-from cruddy.query import *
+from krug.query import *
 from model import Students
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_krug = Blueprint('krug', __name__,
@@ -22,7 +22,7 @@ app_krug = Blueprint('krug', __name__,
 @app_krug.route('/')
 def crud():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("crud.html", table=students_all())
+    return render_template("krug.html", table=students_all())
 
 
 # Flask-Login directs unauthorised users to this unauthorized_handler
@@ -33,9 +33,9 @@ def crud():
 def create():
     """gets data from form and add it to Users table"""
     if request.form:
-        po = Users(
-            request.form.get("name"),
-            request.form.get("text"),
+        po = Students(
+            request.form.get("studentID"),
+            request.form.get("Text"),
         )
         po.create()
     return redirect(url_for('krug.crud'))
@@ -51,7 +51,7 @@ def read():
         po = user_by_id(userid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("crud.html", table=table)
+    return render_template("krug.html", table=table)
 
 
 # CRUD update

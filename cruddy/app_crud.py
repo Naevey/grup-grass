@@ -1,6 +1,7 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
 from flask_login import login_required
+from cruddy.query import *
 
 from __init__ import app, login_manager
 
@@ -24,7 +25,7 @@ app_crud = Blueprint('crud', __name__,
 @login_required  # Flask-Login uses this decorator to restrict acess to logged in users
 def crud():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("crud.html", table=users_all())
+    return render_template("krug.html", table=users_all())
 
 
 # Flask-Login directs unauthorised users to this unauthorized_handler
@@ -95,7 +96,7 @@ def read():
         po = user_by_id(userid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("crud.html", table=table)
+    return render_template("krug.html", table=table)
 
 
 # CRUD update
