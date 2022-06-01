@@ -30,6 +30,10 @@ def calender():
 @login_required
 def upload():
     return render_template("upload.html", table=students_all() )
+@app.route('/studentworks')
+@login_required
+def studentworks():
+    return render_template("studentworks.html", table=students_all() )
 
 @app.route('/blog')
 @login_required

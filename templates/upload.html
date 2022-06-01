@@ -4,8 +4,7 @@
 
 <style>
     body{
-        background-image: url('https://static.skillshare.com/cdn-cgi/image/quality=85,width=1242,height=839,format=auto/uploads/project/339302/cover_1242_fdd8e1bd53b0870702e011981e79f456.jpg');
-        background-size: cover;
+        background-color: #0e163b;
         height: 120%;
     }
     .sub{
@@ -18,25 +17,27 @@
 </style>
 
 <div>
-{#    {% for row in table %}#}
-{#        <option label="{{ row['studentID'] }}">{{ row['studentID'] }}</option>#}
-{#    {% endfor %}#}
+
+
     <h1 style="text-align: center">Upload Your Works</h1>
     <p style="text-align: center"> Here you can upload your own works. Once uploaded they will be displayed on the student works tab.</p>
 </div>
-<form id="upload" enctype="multipart/form-data" action = "{{url_for('content.upload')}}" method = "POST">
+<form id="upload" enctype="multipart/form-data" action = "{{url_for('upload')}}" method = "POST">
     <div class="container py-4 sub bg-dark" style="align-content: center;">
         <div class="name">
-            <label for="name">Name:</label>
-            <input size="6" type="text" name="name">
+            <label for="fname">First Name:</label>
+            <input size="6" type="text" name="fname">
+            <label style="padding-left:2%;" for="lname">Last Name:  </label>
+            <input size="6" type="text" name="lname">
         </div>
+
         <h4>Enter the title of your work:</h4>
         <input type="text">
         <form style="padding-top:2%;" action="/action_page.php"> Upload:
             <input type="file" id="myFile" name="filename">
         </form>
         <h4 style="padding-top:2%;">Enter a description for your piece: </h4>
-        <textarea name="description" style="height: 200px; width: 1100px;" onclick="this.value=''"></textarea>
+        <textarea name="message" id="message" style="height: 200px; width: 1100px;" onclick="this.value=''"></textarea>
         <input class="nav-item" type="submit">
     </div>
 </form>
