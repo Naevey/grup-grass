@@ -8,11 +8,13 @@ from krug.app_crud import app_krug
 from cruddy.app_crud import app_crud
 from cruddy.app_crud_api import app_crud_api
 from krug.query import students_all
+from content import app_content
 
 
 app.register_blueprint(app_krug)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
+# app.register_blueprint(app_content)
 # connects default URL to render index.html
 
 @app.route('/')
@@ -28,11 +30,23 @@ def calender():
 @login_required
 def upload():
     return render_template("upload.html", table=students_all() )
+@app.route('/studentworks')
+@login_required
+def studentworks():
+    return render_template("studentworks.html", table=students_all() )
 
-@app.route('/templates/blog')
+@app.route('/blog')
 @login_required
 def blog():
-    return render_template("blog/blog.html")
+    return render_template("blog.html")
+
+@app.route('/thread')
+def thread():
+    return render_template("thread.html")
+
+@app.route('/resources')
+def resources():
+    return render_template("resources.html")
 
 @app.route('/stub/')
 def stub():
