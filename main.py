@@ -7,11 +7,16 @@ from __init__ import app
 from krug.app_crud import app_krug
 from cruddy.app_crud import app_crud
 from cruddy.app_crud_api import app_crud_api
+from krug.query import students_all
+from content import app_content
+
 
 app.register_blueprint(app_krug)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
+app.register_blueprint(app_content)
 # connects default URL to render index.html
+
 @app.route('/')
 @login_required
 def index():
@@ -24,12 +29,20 @@ def calender():
 @app.route('/upload')
 @login_required
 def upload():
-    return render_template("upload.html")
+    return render_template("upload.html", table=students_all() )
 
-@login_required
 @app.route('/blog')
+@login_required
 def blog():
     return render_template("blog.html")
+
+@app.route('/thread')
+def thread():
+    return render_template("thread.html")
+
+@app.route('/resources')
+def resources():
+    return render_template("resources.html")
 
 @app.route('/stub/')
 def stub():
@@ -45,51 +58,5 @@ def greet():
     # starting and empty input default
     return render_template("greet.html", name="World")
 
-@app.route('/login/', methods=["GET", "POST"])
-def main_login():
-    # obtains form inputs and fulfills login requirements
-    global next_page
-    if request.form:
-        email = request.form.get("email")
-        password = request.form.get("password")
-        if login(email, password):
-            try:        # try to redirect to next page
-                temp = next_page
-                next_page = None
-                return redirect(url_for(temp))
-            except:     # any failure goes to home page
-                return redirect(url_for('index'))
-
-
-    # if not logged in, show the login page
-    return render_template("login.html")
-
-
-# if login url, show phones table only
-@app.route('/logout/', methods=["GET", "POST"])
-@login_required
-def main_logout():
-    logout()
-    return redirect(url_for('index'))
-
-
-@app.route('/authorize/', methods=["GET", "POST"])
-def main_authorize():
-    error_msg = ""
-    # check form inputs and creates user
-    if request.form:
-        # validation should be in HTML
-        user_name = request.form.get("user_name")
-        email = request.form.get("email")
-        password1 = request.form.get("password1")
-        password2 = request.form.get("password2")  # password should be verified
-        if password1 == password2:
-            if authorize(user_name, email, password1):
-                return redirect(url_for('main_login'))
-        else:
-            error_msg = "Passwords do not match"
-    # show the auth user page if the above fails for some reason
-    return render_template("authorize.html", error_msg=error_msg)
-# runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

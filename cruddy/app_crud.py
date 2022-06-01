@@ -25,7 +25,7 @@ app_crud = Blueprint('crud', __name__,
 @login_required  # Flask-Login uses this decorator to restrict acess to logged in users
 def crud():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("krug.html", table=users_all())
+    return render_template("crud.html", table=users_all())
 
 
 # Flask-Login directs unauthorised users to this unauthorized_handler
@@ -52,7 +52,7 @@ def crud_login():
 @login_required
 def logout():
     logout_user()  # removes login state of user from session
-    return redirect(url_for('crud.crud')) # redirects to the crud base page
+    return redirect(url_for('/'))
 
 @app_crud.route('/authorize/', methods=["GET", "POST"])
 def crud_authorize():
@@ -96,7 +96,7 @@ def read():
         po = user_by_id(userid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("krug.html", table=table)
+    return render_template("crud.html", table=table)
 
 
 # CRUD update

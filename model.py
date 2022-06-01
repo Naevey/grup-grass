@@ -73,6 +73,72 @@ class Students(db.Model):
         db.session.delete(self)
         db.session.commit()
         return None
+class Uploads():
+    uploadID = db.Column(db.Integer, primary_key=True)
+    path = db.Column(db.String(255), unique=True, nullable=False)
+    description = db.Column(db.String(255), unique=False, nullable=False)
+    studentID = db.Column(db.String(255))
+    studentName = db.Column(db.String(255))
+    home = db.Column(db.Boolean, default=False)
+    # password = db.Column(db.String(255), unique=False, nullable=False)
+    # phone = db.Column(db.String(255), unique=False, nullable=False)
+
+    # constructor of a User object, initializes of instance variables within object
+    def __init__(self, description, path, studentID, studentName):
+        self.description = description
+        self.path = path
+        self.studentID = studentID
+        self.studentName = studentName
+
+    # CRUD create/add a new record to the table
+    # returns self or None on error
+    def create(self):
+        try:
+            # creates a person object from Users(db.Model) class, passes initializers
+            db.session.add(self)  # add prepares to persist person object to Users table
+            db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit
+            return self
+        except IntegrityError:
+            db.session.remove()
+            return None
+
+    # CRUD read converts self to dictionary
+    # returns dictionary
+    def read(self):
+        return {
+            "uploadID": self.uploadID,
+            "path": self.path,
+            "description": self.description,
+            "studentID": self.studentID,
+            "studentName": self.studentName
+        }
+
+    def homeupdate(self, value):
+        self.home = value;
+        db.session.commit()
+        return self
+
+    # CRUD update: updates users name, password, phone
+    # returns self
+    def update(self, caption=""):
+        """only updates values with length"""
+        if len(caption) > 0:
+            self.caption = caption
+        db.session.commit()
+        return self
+
+    # CRUD delete: remove self
+    # None
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+        return None
+
+    # set password method is used to create encrypted password
+
+    # required for login_user, overrides id (login_user default) to implemented userID
+    def get_id(self):
+        return self.uploadID
 
 def student_tester():
     print("--------------------------")

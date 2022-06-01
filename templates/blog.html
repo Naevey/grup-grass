@@ -1,27 +1,85 @@
-<!DOCTYPE html>
-{% extends "layouts/base.html" %}
-{% set project = "Blog" %}
-
-{% block body %}
-
-<html lang="en"></html>
-
-<style>
-    body{
-        background-color: #0e163b;
-        height: 120%;
-        align-content: center;
-    }
-</style>
-<div>
-    <h1 style="text-align: center">Blog</h1>
-</div>
-<div class="container py-4 sub bg-dark" style="align-content: center;">
-    <h1 style="align-content: center;"> Blog </h1>
-</div>
-
-
-
-
-
-{% endblock %}
+{#<!DOCTYPE html>#}
+{#{% extends "layouts/base.html" %}#}
+{#{% set project = "Blog" %}#}
+{##}
+{#{% block body %}#}
+{##}
+{#<html lang="en"></html>#}
+{##}
+{#<style>#}
+{#    body{#}
+{#        background-color: #0e163b;#}
+{#        height: 120%;#}
+{#        align-content: center;#}
+{#    }#}
+{#</style>#}
+{##}
+{#<body>#}
+{#    <div class="top-bar">#}
+{#        <h1 style="text-align: center">#}
+{#            My Forum#}
+{#        </h1>#}
+{#    </div>#}
+{#    <div class="main">#}
+{#        <ol>#}
+{#        </ol>#}
+{#    </div>#}
+{#    <script src="data.js"></script>#}
+{#    <script>#}
+{#        console.log(threads);#}
+{#        var container = document.querySelector('ol');#}
+{#        for (let thread of threads) {#}
+{#            var html = `#}
+{#            <li class="row">#}
+{#                <a href="/thread.html?${thread.id}">#}
+{#                    <h4 class="title">#}
+{#                        ${thread.title}#}
+{#                    </h4>#}
+{#                    <div class="bottom">#}
+{#                        <p class="timestamp">#}
+{#                            ${new Date(thread.date).toLocaleString()}#}
+{#                        </p>#}
+{#                        <p class="comment-count">#}
+{#                            ${thread.comments.length} comments#}
+{#                        </p>#}
+{#                    </div>#}
+{#                </a>#}
+{#            </li>#}
+{#            `#}
+{#            container.insertAdjacentHTML('beforeend', html);#}
+{#        }#}
+{#    </script>#}
+{#    <style>#}
+{#        a {#}
+{#            text-decoration: none;#}
+{#            color: black;#}
+{#        }#}
+{#        h1, h4, ol {#}
+{#            margin: 0;#}
+{#        }#}
+{#        p {#}
+{#            margin: 5px 0;#}
+{#        }#}
+{#        .top-bar {#}
+{#            background-color: #0e163b;#}
+{#            padding: 0 40px;#}
+{#        }#}
+{#        .row {#}
+{#            padding: 5px 0;#}
+{#        }#}
+{#        .bottom {#}
+{#            display: flex;#}
+{#            color: grey;#}
+{#            font-size: 12px;#}
+{#        }#}
+{#        .timestamp {#}
+{#            padding-right: 10px;#}
+{#        }#}
+{#    </style>#}
+{#</body>#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#{% endblock %}#}

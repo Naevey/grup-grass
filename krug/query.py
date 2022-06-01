@@ -55,9 +55,9 @@ def students_ilike(term):
 
 
 # SQLAlchemy extract single user from database matching ID
-def student_by_id(userid):
+def student_by_id(studentid):
     """finds User in table matching userid """
-    return Students.query.filter_by(userID=userid).first()
+    return Students.query.filter_by(studentID=studentid).first()
 
 
 # SQLAlchemy extract single user from database matching email
@@ -150,5 +150,5 @@ if __name__ == "__main__":
         print(student)
 
     # Clean up data from run, so it can run over and over the same
-    user_record = student_by_firstname(lastname1)
-    user_record.delete()
+    student_record = student_by_firstname(lastname1)
+    student_record.delete()
