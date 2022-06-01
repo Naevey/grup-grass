@@ -4,24 +4,24 @@
 
 {% block body %}
 
-<html lang="en">
-<tbody>
-{% for note in notes %}
-    <tr>
-        <td>{{ note.note | safe }}</td>
-    </tr>
-{% endfor %}
-</tbody>
+<html lang="en"></html>
 
-<body>
-    <div style="font-size: 50px; position: center">BLOG</div>
-</body>
+<style>
+    body{
+        background-color: #0e163b;
+        height: 120%;
+        align-content: center;
+    }
+</style>
+<div>
+    <h1 style="text-align: center">Blog</h1>
+</div>
+<div class="container py-4 sub bg-dark" style="align-content: center;">
+    <h1 style="align-content: center;"> Blog </h1>
+</div>
 
-<tr>
-    <td><textarea rows = "5" cols = "100%" name = "notes" id="notes" required></textarea></td>
-    <td><input type="submit" value="Add" ></td>
-</tr>
 
-</html>
+
+
 
 {% endblock %}
