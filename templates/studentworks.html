@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+{% block body %}
+
+<style>
+    body{
+        background-color: #0e163b;
+        height: 120%;
+    }
+    .sub{
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+    .name{
+        display:flex;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Works</title>
+</head>
+<body>
+<h1 style="text-align: center">Here are some Student Works</h1>
+
+<div class="container py-4 sub bg-dark" style="align-content: center;">
+    <div class="container-fluid py-5">
+        <table class="table">
+            <thead>
+            <tr style="color:#ffffff">
+
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <!-- Loop through rows in table -->
+            {% for row in table %}
+                <!--
+                Prepare table for display
+                    caution: phone number needs "~" format step to force type to string
+                -->
+                <tr style="color:#ffffff">
+
+                    <td>{{ row['studentID'] }}</td>
+                    <td>{{ row['firstname'] }}</td>
+                    <td>{{ row['lastname'] }}</td>
+                    <td>{{ row['title'] }}</td>
+                    <td>{{ row['description']}}</td>
+                    <td>{{ pnf }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock %}

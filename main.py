@@ -14,7 +14,6 @@ from content import app_content
 app.register_blueprint(app_krug)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
-# app.register_blueprint(app_content)
 # connects default URL to render index.html
 
 @app.route('/')
@@ -30,6 +29,10 @@ def calender():
 @login_required
 def upload():
     return render_template("upload.html", table=students_all() )
+@app.route('/studentworks')
+@login_required
+def studentworks():
+    return render_template("studentworks.html", table=students_all() )
 
 @app.route('/blog')
 @login_required
