@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% set project = "Blog" %}
+
+{% block body %}
+    <script>
+        function myFunction() {
+            document.getElementById("text-area").innerHTML = document.getElementById("text-area").innerHTML + document.getElementById("myInput").value;
+        }
+    </script>
+
+    <html lang="en">
+    <tbody>
+    {% for note in notes %}
+        <tr>
+            <td>{{ note.note | safe }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+
+    <body>
+    <div style="font-size: 50px; position: center">BLOG</div>
+    <div class="container py-4 sub bg-dark" style="position: center" id="text-area">
+        All members should create a 3D object to add to our new game.
+    </div>
+
+    </body>
+
+    <tr>
+        <td><textarea rows = "5" cols = "100%" name = "notes" id="myInput" required></textarea></td>
+        <button onclick="myFunction()">Add</button>
+        <button onclick="document.getElementById('myInput').value = ''">Remove</button>
+    </tr>
+
+    </html>
+{% endblock %}

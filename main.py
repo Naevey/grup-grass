@@ -29,10 +29,10 @@ def calender():
 def upload():
     return render_template("upload.html", table=students_all() )
 
+@app.route('/templates/blog')
 @login_required
-@app.route('/blog')
 def blog():
-    return render_template("blog.html")
+    return render_template("blog/blog.html")
 
 @app.route('/stub/')
 def stub():
