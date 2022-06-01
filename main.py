@@ -14,7 +14,6 @@ from content import app_content
 app.register_blueprint(app_krug)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
-app.register_blueprint(app_content)
 # connects default URL to render index.html
 
 @app.route('/')
