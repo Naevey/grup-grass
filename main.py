@@ -19,7 +19,6 @@ app.register_blueprint(app_crud_api)
 # connects default URL to render index.html
 
 @app.route('/')
-@login_required
 def index():
     return render_template("index.html")
 
@@ -49,16 +48,6 @@ def resources():
 def stub():
     return render_template("stub.html")
 
-@app.route('/greet', methods=['GET', 'POST'])
-def greet():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("greet.html", name=name)
-    # starting and empty input default
-    return render_template("greet.html", name="World")
-
 # serve uploaded files so they can be downloaded by users.
 @app.route('/uploads/<name>')
 def uploads_endpoint(name):
@@ -67,8 +56,8 @@ def uploads_endpoint(name):
 
 # register "uploads_endpoint" endpoint so url_for will find all uploaded files
 app.add_url_rule(
-    "/" + app.config['UPLOAD_FOLDER'] + "/<name>", endpoint="uploads_endpoint", build_only=True
-)
+    "/" + app.config['UPLOAD_FOLDER'] + "/<name>", endpoint="uploads_endpoint", build_only=True)
+
 
 
 if __name__ == "__main__":

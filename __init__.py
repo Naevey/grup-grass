@@ -10,9 +10,7 @@ These object will be used throughout project.
 """
 
 # Setup of key Flask object (app)
-UPLOAD_FOLDER = 'static/upload/'
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 dbURI = 'sqlite:///model/myDB.db'
 # Setup SQLAlchemy object and properties for the database (db)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -22,5 +20,10 @@ db = SQLAlchemy(app)
 Migrate(app, db)
 # Setup LoginManager object (app)
 login_manager = LoginManager()
-login_manager.login_view = 'auth.login'
 login_manager.init_app(app)
+
+app.config['NEXT_PAGE'] = None  # next page on login attempt
+app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # maximum size of uploaded content
+app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']  # supported file types
+app.config['UPLOAD_FOLDER'] = 'static/uploads/'  # location of user uploaded content
+
