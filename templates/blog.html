@@ -21,6 +21,7 @@
     <div style="font-size: 50px; position: center">BLOG</div>
     <div class="container py-4 sub bg-dark" style="position: center" id="text-area">
         All members should create a 3D object to add to our new game.
+        <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
     </div>
 
     </body>
@@ -31,5 +32,15 @@
         <button onclick="document.getElementById('myInput').value = ''">Remove</button>
     </tr>
 
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+    <button><label for="file">Upload File</label></button>
+    <p><img id="output" width="200" /></p>
+
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
     </html>
 {% endblock %}
