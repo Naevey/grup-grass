@@ -38,7 +38,7 @@ def upload():
     user = uo.read()  # extract user record (Dictionary)
     # sortedtable = uploads_by_studentID(current_user.userID)
     # load content page
-    return render_template('upload.html', user=user, table=uploads_all())
+    return render_template('oldupload.html', user=user, table=uploads_all())
 
 '''
 @app_content.route('/gallery/')
