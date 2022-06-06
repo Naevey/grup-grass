@@ -6,42 +6,105 @@
 </style>
 <style>
     .nav-item{
-        border-radius: 15px;
-        {#border: 2px solid #D3D3D3;#}
+        {#border-radius: 15px;#}
         background-color: Transparent;
-        border: 1px solid;
+        {#border: 1px solid;#}
         color: white;
-        {#height: 100%;#}
-        {#width: 500%;#}
         margin-right: 1%;
     }
-    .nav-item:hover{
-        background-color: #d58214;
-        color:white;
-    }
-    .navborder{
-        {#border-radius: 100px;#}
-        {#border: 2px solid #D3D3D3;#}
-    }
+    {#.nav-item:hover{#}
+    {#    background-color: #d58214;#}
+    {#    color:white;#}
+    {#}#}
     .bg-custom-2 {
         background-image: linear-gradient(15deg, #14204f 0%, #0e163b 100%);
-        {#opacity: 90%;#}
     }
 </style>
+<style>
+    nav.shift ul li a {
+        position:relative;
+        {#z-index: 1;#}
+    }
+    nav.shift ul li a:hover {
+        color: #0e163b;
+
+    }
+    nav.shift ul li a:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 1px;
+        content: '.';
+        color: transparent;
+        background: #ffffff;
+        opacity: 0;
+        z-index: -1;
+    }
+    nav.shift ul li a:hover:after {
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+    }
+</style>
+<style>
+    nav {
+        height: 10%;
+    }
+    nav ul {
+        padding-top: 2.5%;
+        list-style: none;
+        text-align: center;
+        vertical-align: middle;
+    }
+    nav ul li {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: #aaa;
+        width: 100%;
+    {#font-weight: 800;#}
+        margin: 0 10px;
+    }
+    nav ul li a,
+    nav ul li a:after,
+    nav ul li a:before {
+        transition: all .5s;
+    }
+    nav ul li a:hover {
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        color: #555;
+    }
+</style>
+
 <div class="navborder">
     <nav class="navbar navbar-expand-sm navbar-light bg-custom-2 ">
     <a class="navbar-brand" href="/" style="font-family: Helvetica; color:white;" title="3D Dev">3D Development</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
+    <img src="/assets/zhongxina-removebg-preview.jpg" width="55" style="padding-right: 7px; padding-left: 7px; cursor: pointer" class="align-center" alt="" title="Home" onclick="location.href='/'">
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <a class="nav-link shift nav-item"  href={{ url_for('calender') }}>Calendar</a>
-        <a class="nav-link shift nav-item" href=resources>Resources</a>
-        <a class="nav-link shift nav-item" href={{ url_for('blog') }}>Blog</a>
-        <a class="nav-link shift nav-item" href="studentworks">Student Works</a>
-        <a class="nav-link shift nav-item" href="upload">Upload Student Works</a>
-        <a class="nav-link shift nav navbar-nav ml-auto" style="color: white" href={{ url_for('crud.crud_login') }}>Login</a>
-
+        <nav class="shift justify-content-center">
+            <ul>
+                <li><a class="nav-link nav-item"  href={{ url_for('calender') }}>Calendar</a></li>
+                <li><a class="nav-link nav-item" href=resources>Resources</a></li>
+                <li><a class="nav-link shift nav-item" href={{ url_for('blog') }}>Blog</a></li>
+                <li><a class="nav-link nav-item" href="content">Student Works</a></li>
+                <li><a class="nav-link nav-item" href="upload">Upload Student Works</a></li>
+            </ul>
+        </nav>
+        <a class="nav-link nav navbar-nav ml-auto " style="display: inline-block; color: white" href={{ url_for('crud.crud_login') }}>Login</a>
     </div>
     <div>
 
