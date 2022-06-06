@@ -2,6 +2,8 @@
 
 # Project 
 
+Sponsor Review: He said that it is alright, there are some ideas that he could use. Overall, it could be better and better polished.
+
 ## Sponsor: 3D Animation Club - Sahil Samar
 Contact Information - (858)859-5095
 ## Our Project Idea
